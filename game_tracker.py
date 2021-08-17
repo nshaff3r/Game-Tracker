@@ -46,12 +46,14 @@ while True:
         loser = input("Who lost? ").rstrip().lower()
         wingoals = int(input(f"How many goals did {winner} score? ").rstrip())
         losgoals = int(input(f"How many goals did {loser} score? ").rstrip())
+        savedata[winner]['Games Played'] += 1
         savedata[winner]['Wins'] += 1
         savedata[winner]['Goals Scored'] += wingoals
         savedata[winner]['Goals Against'] += losgoals
         savedata[winner]['Win %'] = round((savedata[winner]['Wins'] /
                                            (savedata[winner]['Wins'] + savedata[winner]['Losses'])), 3)
         savedata[winner]['Goal Differential'] = savedata[winner]['Goals Scored'] - savedata[winner]['Goals Against']
+        savedata[loser]['Games Played'] += 1
         savedata[loser]['Losses'] += 1
         savedata[loser]['Goals Scored'] += losgoals
         savedata[loser]['Goals Against'] += wingoals
@@ -60,6 +62,7 @@ while True:
         savedata[loser]['Goal Differential'] = savedata[loser]['Goals Scored'] - savedata[loser]['Goals Against']
         task = input("\nWould you like to add another game? ").rstrip().lower()
     elif "no" in task:  # User does not want to add data
+        print("Exiting program...")
         break
     elif "zero" in task:  # User wants to clear saved data
         if "yes" in input("Are you sure? This can't be undone. ").rstrip().lower():
@@ -86,12 +89,12 @@ table = BeautifulTable(maxwidth=150)
 table.set_style(BeautifulTable.STYLE_SEPARATED)
 
 # Header rows for the table
-table.columns.header = ["Person", "Wins", "Losses", "Win %",
+table.columns.header = ["Person", "Wins", "Losses", "Games Played", "Win %",
                         "Goals Scored", "Goals Against", "Goal Differential"]
 
 # Writes updated data back into CSV file and into the statistics table
 with open(path, 'w', newline='') as file:
-    fields = "Person", "Wins", "Losses", "Win %", "Goals Scored", "Goals Against", "Goal Differential"
+    fields = table.columns.header
     writer = csv.DictWriter(file, fieldnames=fields)
     writer.writeheader()  # Rewrites header of CSV file
     for player in savedata:
