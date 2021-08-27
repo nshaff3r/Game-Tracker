@@ -1,5 +1,5 @@
 """
-A program that calculated and keeps track of game standings,
+A program that calculates and keeps track of game standings,
 printing them nicely in a table and storing them
 in a CSV file.
 """
