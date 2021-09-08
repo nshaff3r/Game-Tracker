@@ -22,3 +22,7 @@ and a CSV save file.
 # A Note About Elo Rankings:
 
 Elo rankings have been implemented to be used as an aditional metric for rankings in an attempt to stablize changes given that players may be at different levels of skills and may play one another in uneven ammounts. Note that by default, all players start with an Elo ranking of 1500, which naturally gets more accuracte the more games are played.
+
+# Issues and Errors:
+
+It's important to note that if the names or locations of save files are changed, the program will be unable to run. If this is the case, please rename and and move save files back into the same directory as game_tracker.py, or recreate them in setup.py.
