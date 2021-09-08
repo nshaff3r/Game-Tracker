@@ -99,7 +99,7 @@ def user_program(prompt):
 
         if zeroconfirm == "yes":  # The user still wants to clear data
             # Copies save file to downloads
-            copyfile(savefile, downloads + "/savedata.csv")
+            copyfile(savefile, downloads + f"/{gametype}savedata.csv")
             print("Save file has been copied as a precautionary measure to your downloads folder.")
 
             # Zeros out data in memory
@@ -134,7 +134,7 @@ def user_program(prompt):
 
             if mergeconfirm == "yes":  # The user still wants to clear data
                 # Copies save file to downloads
-                copyfile(savefile, downloads + "savedata.csv")
+                copyfile(savefile, downloads + f"/{gametype}savedata.csv")
                 print("Save file has been copied as a precautionary measure to your downloads folder.")
 
                 # Will store path to tournament save data
@@ -245,7 +245,7 @@ def user_program(prompt):
 
         if delconfirm == "yes":  # The user still wants to remove a player
             # Copies save file to downloads
-            copyfile(savefile, downloads + "/savedata.csv")
+            copyfile(savefile, downloads + f"/{gametype}savedata.csv")
             print("Save file has been copied as a precautionary measure to your downloads folder.")
 
             # Asks user for the winner and loser, ensuring that only a name in savedata is referenced
