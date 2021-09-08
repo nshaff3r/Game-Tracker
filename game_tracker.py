@@ -79,7 +79,7 @@ def user_program(prompt):
                                           (savedata[loser]['Wins'] + savedata[loser]['Losses'])), 3)
         savedata[loser]['Goal Differential'] = savedata[loser]['Goals Scored'] - savedata[loser]['Goals Against']
 
-        if "league" in savefile:
+        if gametype == "league":
             elo(savedata, winner, loser, update=True)
         # Repeats the program by asking the user to select another course of action
         user_program("\nWould you like to add another game, clear data, merge data, predict a game, "
