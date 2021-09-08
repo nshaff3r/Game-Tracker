@@ -39,7 +39,7 @@ def main():
 
 # Main program, interacts with user.
 def user_program(prompt):
-    global savedata, standings, savefile  # These variables may need to be updated depending on used selection
+    global savedata, standings, savefile  # These variables may need to be updated depending on user selection
 
     # Checks user input for the mode they want to use
     task = input_checker(["game", "add", "clear", "merge", "exit", "no", "predict", "expect",
