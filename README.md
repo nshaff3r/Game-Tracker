@@ -19,6 +19,8 @@ and a CSV save file.
 
 7) Standings can be viewed each time the program is run or in the standings.txt file created for each gametype. 
 
+8) To recover data from a copied save file, replace the save file in game_tracker.py's directory with the recovered one.
+
 ## A Note About Elo Rankings:
 
 Elo rankings have been implemented to be used as an aditional metric in an attempt to stablize changes given that players may be at different levels of skills and may play one another in uneven ammounts. Note that by default, all players start with an Elo ranking of 1500, which naturally gets more accuracte as more games are played.
