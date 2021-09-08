@@ -21,7 +21,7 @@ and a CSV save file.
 
 ## A Note About Elo Rankings:
 
-Elo rankings have been implemented to be used as an aditional metric in an attempt to stablize changes given that players may be at different levels of skills and may play one another in uneven ammounts. Note that by default, all players start with an Elo ranking of 1500, which naturally gets more accuracte the more games are played.
+Elo rankings have been implemented to be used as an aditional metric in an attempt to stablize changes given that players may be at different levels of skills and may play one another in uneven ammounts. Note that by default, all players start with an Elo ranking of 1500, which naturally gets more accuracte as more games are played.
 
 ## Issues and Errors:
 
