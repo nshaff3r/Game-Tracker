@@ -297,7 +297,7 @@ def elo(datastruct, player1, player2, update=False):
 
     # If update is not set, print out expected elo values
     return "{} has a {}% chance of beating {} in a game."\
-        .format(player1.capitalize(), round(e1, 3), player2.capitalize())
+        .format(player1.capitalize(), round(e1, 5) * 100, player2.capitalize())
 
 
 # Recursively checks for correct user input given a list of responses, a prompt,
